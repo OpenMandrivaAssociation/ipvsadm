@@ -14,7 +14,6 @@ Patch1:		ipvsadm-1.24-usage.patch
 BuildRequires:	popt-devel
 Requires(post): rpm-helper
 Requires(preun): rpm-helper
-Buildroot:	%{_tmppath}/%{name}-%{version}-root
 
 %description 
 ipvsadm is a utility to administer the IP virtual server services offered by
