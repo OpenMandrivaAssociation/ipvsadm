@@ -1,7 +1,7 @@
 Summary:	Administration tool for Linux Virtual Server
 Name:		ipvsadm
 Version:	1.24
-Release:	%mkrel 7
+Release:	%mkrel 8
 License:	GPL 
 Group:		System/Kernel and hardware
 URL:		http://www.linuxvirtualserver.org
@@ -15,7 +15,7 @@ Patch2:		ipvsadm-1.24-LDFLAGS.diff
 BuildRequires:	popt-devel
 Requires(post): rpm-helper
 Requires(preun): rpm-helper
-Buildroot:	%{_tmppath}/%{name}-%{version}-root
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description 
 ipvsadm is a utility to administer the IP virtual server services offered by
@@ -34,10 +34,9 @@ cp %{SOURCE2} %{name}.sysconfig
 cp %{SOURCE3} rc.firewall.iptables
 
 %build
-export LDFLAGS="`rpm --eval %%configure|grep LDFLAGS|cut -d\\" -f2|sed -e 's/\$LDFLAGS\ //'`"
 
 # parallel make doesn't work [FL Tue Jan 20 09:14:18 2004]
-make CFLAGS="%{optflags}" LDFLAGS="$LDFLAGS"
+make CFLAGS="%{optflags}" LDFLAGS="%ldflags"
 
 %install
 rm -rf %{buildroot}
