@@ -1,7 +1,7 @@
 Summary:	Administration tool for Linux Virtual Server
 Name:		ipvsadm
 Version:	1.24
-Release:	%mkrel 10
+Release:	%mkrel 11
 License:	GPL 
 Group:		System/Kernel and hardware
 URL:		http://www.linuxvirtualserver.org
