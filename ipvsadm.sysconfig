@@ -1,0 +1,9 @@
+# Configure a redirector host to distribute incoming Web requests 
+# addressed to port 80 on 10.1.1.1 equally (Round Robin )
+# to  port  80 on  2 Web server hosts ( 192.168.10.1 , 192.168.10.2 ). 
+# The networking model for this example is NAT with each of the real
+# servers being masqueraded by the LVS.
+# see also ipvsadm(8).
+#-A -t 10.1.1.1:80 -s rr
+#-a -t 10.1.1.1:80 -r 192.168.10.2:80 -m -w 1
+#-a -t 10.1.1.1:80 -r 192.168.10.1:80 -m -w 1

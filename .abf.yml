@@ -1,5 +1,2 @@
 sources:
-  "ipvsadm-1.24.tar.bz2:"	04c6378521bebf8878c3ecc2586162c0c32a009c
-  "ipvsadm.sysconfig:"	37be1d50070db666abe06ca879f9d085a91682e9
-  "ip_vs.h:"	3cea2ac4ba601d5971595596cf7b71fb50a88bcc
-  "rc.firewall.iptables:"	2e64c264afc9ce80e8011da0cc53df0a2c03692d
+  "ipvsadm-1.24.tar.bz2": 04c6378521bebf8878c3ecc2586162c0c32a009c
