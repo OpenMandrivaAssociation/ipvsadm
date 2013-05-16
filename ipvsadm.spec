@@ -9,6 +9,7 @@ Source0:	http://www.linuxvirtualserver.org/software/kernel-2.6/%{name}-%{version
 Source2:	ipvsadm.sysconfig
 Source3:	rc.firewall.iptables
 Patch1:		ipvsadm-1.24-usage.patch
+BuildRequires:	pkgconfig(libnl-1)
 BuildRequires:	pkgconfig(popt)
 Requires(post,preun):	rpm-helper
 
