@@ -34,7 +34,7 @@ mkdir -p %{buildroot}/{sbin,%{_mandir}/man8,etc/rc.d/init.d,etc/sysconfig}
 make BUILD_ROOT=%{buildroot} MANDIR=%{_mandir} install
 
 # 345 default runlevels in the initscript
-sed -i -e 's@\# chkconfig\:	\- 08 92+@\# chkconfig\:	345 08 92@' %{buildroot}%{_initrddir}/%{name};
+sed -i -e 's@# chkconfig: - 08 92@# chkconfig: 345 08 92@' %{buildroot}%{_initrddir}/%{name}
 
 install -m0644 %{name}.sysconfig %{buildroot}%{_sysconfdir}/sysconfig/%{name}
 
