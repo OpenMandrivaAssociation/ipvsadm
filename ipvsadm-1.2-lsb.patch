@@ -1,0 +1,27 @@
+--- ipvsadm-1.26/ipvsadm.sh.orig	2012-05-11 10:11:16.506748189 +0100
++++ ipvsadm-1.26/ipvsadm.sh	2012-05-11 10:12:05.588938474 +0100
+@@ -2,7 +2,7 @@
+ #
+ # Startup script handle the initialisation of LVS
+ #
+-# chkconfig: - 08 92
++# chkconfig: 345 08 92
+ #
+ # description: Initialise the Linux Virtual Server
+ #              http://www.linuxvirtualserver.org/
+@@ -16,6 +16,15 @@
+ #
+ # config: /etc/sysconfig/ipvsadm
+ # config: /etc/ipvsadm.rules
++#
++### BEGIN INIT INFO
++# Provides: ipvsadm
++# Required-Start: $network
++# Required-Stop: $network
++# Default-Start: 3 4 5
++# Short-Description: Initialise the Linux Virtual Server
++# Description: Initialise the Linux Virtual Server
++### END INIT INFO
+ 
+ 
+ # set the configuration file

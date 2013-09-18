@@ -1,0 +1,19 @@
+--- Makefile	2003-12-20 10:25:46.000000000 +0100
++++ Makefile.oden	2008-12-19 16:46:01.000000000 +0100
+@@ -44,6 +44,7 @@ INIT		= $(BUILD_ROOT)/etc/rc.d/init.d
+ MKDIR		= mkdir
+ INSTALL		= install
+ STATIC_LIBS	= libipvs/libipvs.a
++LDFLAGS		= 
+ 
+ ifeq "${ARCH}" "sparc64"
+     CFLAGS = -Wall -Wunused -Wstrict-prototypes -g -m64 -pipe -mcpu=ultrasparc -mcmodel=medlow
+@@ -97,7 +98,7 @@ libs:
+ 		make -C libipvs
+ 
+ ipvsadm:	$(OBJS) $(STATIC_LIBS)
+-		$(CC) $(CFLAGS) -o $@ $^ $(LIBS)
++		$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^ $(LIBS)
+ 
+ install:        all
+ 		if [ ! -d $(SBIN) ]; then $(MKDIR) -p $(SBIN); fi
