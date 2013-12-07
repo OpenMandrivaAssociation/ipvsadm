@@ -7,7 +7,7 @@
 Summary:	Administration tool for Linux Virtual Server
 Name:		ipvsadm
 Version:	1.27
-Release:	3
+Release:	4
 License:	GPL 
 Group:		System/Kernel and hardware
 URL:		https://kernel.org/pub/linux/utils/kernel/ipvsadm/
